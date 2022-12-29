@@ -36,12 +36,12 @@ public class UserService implements UserDetailsService {
     * @return 저장되는 회원의 PK
     * */
     public Long save(UserDto userDto){
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        userDto.setPassword(encoder.encode(userDto.getPassword()));
+       BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+       userDto.setPassword(encoder.encode(userDto.getPassword()));
 
-        return UserRepository.save(UserEntity.builder()
-                .id(userDto.getId())
-                .name(userDto.getName())
-                .password(userDto.getPassword()).build()).getIdx();
+       return userRepository.save(UserEntity.builder()
+               .id(userDto.getId())
+               .name(userDto.getName())
+               .password(userDto.getPassword()).build()).getIdx();
     }
 }
