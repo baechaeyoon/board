@@ -16,12 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 @RequiredArgsConstructor
 public class UserController {
 
-<<<<<<< HEAD
-    //final 키워드 삭제
     private UserService userService;
-=======
-    private final UserService userService;
->>>>>>> parent of 39bb506 (final 키워드 삭제)
 
     @GetMapping(value = "/login")
     public String login(){
