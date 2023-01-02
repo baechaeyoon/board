@@ -13,8 +13,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService implements UserDetailsService {
 
+<<<<<<< HEAD
     //final 키워드 삭제
     private UserRepository userRepository;
+=======
+    private final UserRepository userRepository;
+>>>>>>> parent of 39bb506 (final 키워드 삭제)
 
     /*
     * @param id 아이디
