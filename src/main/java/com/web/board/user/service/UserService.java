@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService implements UserDetailsService {
 
-    //final 키워드 삭제
     private UserRepository userRepository;
 
     /*

@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 @RequiredArgsConstructor
 public class UserController {
 
-    //final 키워드 삭제
     private UserService userService;
 
     @GetMapping(value = "/login")
