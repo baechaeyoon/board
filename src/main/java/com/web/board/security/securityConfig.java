@@ -14,7 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableWebSecurity  //spring security를 활성화한다는 의미의 어노테이션
 @RequiredArgsConstructor
 public class securityConfig extends WebSecurityConfigurerAdapter {
-    private final UserService userService;  //사용자 정보를 가져올 클래스스
+    private UserService userService;  //사용자 정보를 가져올 클래스스
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/static/css/**","/static/js/**","/static/img/**");
