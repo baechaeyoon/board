@@ -13,7 +13,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService implements UserDetailsService {
 
-    private final UserRepository userRepository;
+    //final 키워드 삭제
+    private UserRepository userRepository;
 
     /*
     * @param id 아이디
