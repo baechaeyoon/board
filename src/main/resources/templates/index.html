@@ -2,9 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Hello World!</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        p{
+            margin: 0;
+        }
+        a{
+            text-decoration-line: none;
+            color: #555;
+        }
+        .container{
+            margin-top: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .row{
+            padding: 40px;
+        }
+        
+        /* Login Box */
+        .login-box{
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+                
+        }
+        
+        /* Logo Box */
+        .logo-box{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 4.8rem;
+            font-weight: bold;
+        }
+        .logo-image p{
+            width: 100px;
+            height: 100px;
+            border: 10px solid #356ce5;
+            border-radius: 50%;
+        }
+        .title{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Button Box */
+        .button-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .button-box a{
+            padding: 1rem 0;
+            width: 150px;
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 1rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .button-box a:first-child{
+            margin-right: 2rem;
+        }
+        .login{
+            
+            border-color: #2563eb;
+        }
+        .login:hover{
+            color: #858585;
+        }
+        .join{
+            background-color: #2563eb;
+            border-color: #2563eb;
+            color: #fff;
+        }
+        .join:hover{
+            background-color: #356ce5;
+            border-color: #356ce5;
+        }
+        
+        /* footer */
+        .footer{
+            position: absolute;
+            padding: 20px;
+            bottom: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+
+    </script>
 </head>
 <body>
-
+    <div class="container">
+        <div class="login-box">
+            <div class="row logo-box">
+                <div class="logo-image">
+                    <p></p>
+                </div>
+                <div class="title">
+                    <p>Hello</p>
+                    <p>World!</p>
+                </div>
+            </div>
+            <div class="row button-box">
+                <a href="#" class="login">로그인</a>
+                <a href="#" class="join">회원가입</a>
+            </div>
+        </div>
+        <div class="footer">
+            ⓒ 2022 (주)Yoon Corp. All rights reserved.
+        </div>
+    </div>
 </body>
 </html>
