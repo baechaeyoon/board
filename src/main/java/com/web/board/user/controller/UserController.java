@@ -8,6 +8,7 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,19 +17,45 @@ import javax.servlet.http.HttpServletResponse;
 @RequiredArgsConstructor
 public class UserController {
 
-    private UserService userService;
+    private final UserService userService;
 
+    /*
+    * index 페이지
+    * @author : baechaeyoon
+    * @date : 2023-01-03
+    * */
+    @RequestMapping(value = "/index")
+    public String index(){
+        return "index";
+    }
+
+
+    /*
+    * 로그인 페이지
+    * @author : baechaeyoon
+    * @date : 2022-12-27
+    * */
     @GetMapping(value = "/login")
     public String login(){
         return "user/login";
     }
 
+    /*
+    * 회원 추가
+    * @author : baechaeyoon
+    * @date : 2022-12-27
+    * */
     @PostMapping("/join")
-    public String join(UserDto userDto){    //회원 추가
+    public String join(UserDto userDto){
         userService.save(userDto);
         return "redirect:/login";
     }
 
+    /*
+    * 로그아웃
+    * @author : baechaeyoon
+    * @date : 2022-12-27
+    * */
     public String logout(HttpServletRequest request, HttpServletResponse response){
         new SecurityContextLogoutHandler().logout(request,response, SecurityContextHolder.getContext().getAuthentication());
         return "redirect:/login";
