@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService implements UserDetailsService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     /*
     * @param id 아이디
@@ -35,6 +35,7 @@ public class UserService implements UserDetailsService {
     * @param UserEntity 회원정보가 들어있는 DTO
     * @return 저장되는 회원의 PK
     * */
+    
     public Long save(UserDto userDto){
        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
        userDto.setPassword(encoder.encode(userDto.getPassword()));
@@ -44,4 +45,5 @@ public class UserService implements UserDetailsService {
                .name(userDto.getName())
                .password(userDto.getPassword()).build()).getIdx();
     }
+    
 }
