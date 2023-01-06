@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="contentSearchFragment(title, type)">
+	<div class="research-section">
+        <h3 class="contnet-title" th:text="${title}"></h3>
+		<div class="selectbox-section">
+			<select id="selectDevice" class="select-box">
+				<th:block th:each="device : ${deviceInfo}">
+					<option th:value="${device.di_idx}" th:utext="${device.di_name}"></option>
+				</th:block>
+			</select>
+			<th:block th:if="${type == '1'}">
+				<!-- 
+				<select id="selectAlarm" class="select-box">
+					<th:block th:each="alarm : ${alarmType}">
+						<option th:value="${alarm.ac_idx}" th:utext="${alarm.ac_name}"></option>
+					</th:block>
+				</select>
+				-->
+			</th:block>
+		   	<input id="startDate" class="select-box" type="text" readonly="readonly">
+		    <input id="endDate" class="select-box" type="text" readonly="readonly">
+		    <button class="research-btn" id="research-btn" onClick="searchPage()">조회</button>
+	    	<button class="excel-btn" onclick="excelDownload()">엑셀다운로드</button>
+		</div>
+	</div>
+</th:block>
+</html>

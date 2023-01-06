@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="headerFragment">
+	<div class="header">
+	    <div class="header_logo">
+	    	<a th:href="@{/}">
+				<img src="#" />
+			</a>
+	    </div>
+	    <div class="alarm_list">
+	    	<a th:href="@{/report/alarm}"><i class="fas fa-bell"></i>
+	    	<span class="red">!</span>
+	    	</a>
+	    </div>
+	</div>
+</th:block>
+</html>

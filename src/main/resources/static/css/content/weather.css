@@ -1,0 +1,114 @@
+
+.table-title, .data-section-list{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.table-title{
+    color: #9CBCF8;
+    margin-top: 40px;
+    font-size: 14px;
+}
+.table-title thead tr td{
+    width: 11%;
+    /* border: 1px solid #ddd; */
+}
+.data-section{
+    margin-top: 15px;
+    padding: 10px 0;
+    height: 400px;
+    background: #F4F5F8;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow: auto;
+    font-size: 13px;
+}
+.data-section::-webkit-scrollbar{
+    width: 5px;
+}
+.data-section::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+}
+.data-section-list tbody tr td{
+    width: 11%;
+    padding: 10px 0;
+}
+
+.data-table{
+	padding-top: 10px;
+}
+.data-title{
+    padding: 0 10px;
+}
+.data-title ul{
+    color: #7EA9F9;
+    padding: 0 5px;
+    list-style: none;
+    font-size: 15px;
+    display: flex;
+    margin-top: 30px;
+}
+.data-title ul li{
+    width: 40%;
+    text-align: center;
+}
+.data-section{
+    padding: 10px;
+}
+.data-section ul{
+    padding: 10px 5px;
+    margin: 0 0 10px 0;
+    list-style: none;
+    font-size: 14px; 
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 7px #E1E1E1;
+}
+.data-section ul li{
+    width: 20%;
+    text-align: center;
+}
+.data-section ul li span{
+    display: inline-block;
+    width: 80px;
+    padding: 4px 0;
+    border-radius: 30px;
+}
+
+.data-section ul li:nth-child(1) span{
+    color: #FF7272;
+    background-color: #FFEFF0;
+    border: 1px solid #FFC8CC;
+}
+.data-section ul li:nth-child(2) span{
+    color: #5E9BFB;
+    background-color: #F6FAFF;
+    border: 1px solid #97C0FF;
+}
+.data-section ul li:nth-child(3) span{
+    color: #FEAD52;
+    background-color: #FFF9F1;
+    border: 1px solid #FFC06E;
+}
+.data-section ul li:nth-child(4) span{
+    color: #5BD567;
+    background-color: #F3FFF5;
+    border: 1px solid #A8EBAF;
+}
+.data-section ul li:nth-child(5) span{
+    color: #9F9F9F;
+    background-color: #FBFBFB;
+    border: 1px solid #DEDEDE;
+}
+.data-section ul li:nth-child(6) span{color: #828282;}
+.data-section ul li:nth-child(7) span{
+	color: #AEAEAE;
+    width: auto !important;
+}
+
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="paginationFragment">
+
+            <li class="page-item page-item-start">
+                  <a class="page-link" th:onclick="|searchPage(${pageMaker.startPage});|">처음</a>
+            </li>
+            <li class="page-item page-item-prev">
+                  <a class="page-link" th:if="${pageMaker.cri.page} == 1" href="javascript:void(0)">이전</a>
+                  <a class="page-link" th:unless="${pageMaker.cri.page} == 1" th:onclick="|searchPage(${pageMaker.cri.page}-1);|">이전</a>
+            </li>
+			<li class="page-item page-item-list" th:each="idx,iterStat : ${#numbers.sequence(pageMaker.prevPage,pageMaker.nextPage)}" th:classappend="${pageMaker.cri.page} == ${idx} ? pagination-active : null">
+                <a class="page-link" th:onclick="|searchPage(${idx});|" th:text="${idx}"></a>
+            </li>
+            <li class="page-item page-item-next">
+                  <a class="page-link" th:if="${pageMaker.next} == true" th:onclick="|searchPage(${pageMaker.cri.page}+1);|">다음</a>
+                  <a class="page-link" th:unless="${pageMaker.next} == true" href="javascript:void(0)">다음</a>
+            </li>
+            <li class="page-item page-item-end">
+                  <a class="page-link" th:onclick="|searchPage(${pageMaker.endPage});|">마지막</a>
+            </li>
+
+</th:block>
+</html>
