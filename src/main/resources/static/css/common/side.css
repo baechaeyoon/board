@@ -1,0 +1,32 @@
+.nav-links{
+	padding-top: 20px;
+	padding-left: 20px;
+	font-size: 1.125rem;
+}
+.nav-links li{
+	color: #303030;
+	padding: 10px 0;
+}
+.nav-title{
+	font-weight: bold;
+}
+.nav-menu{
+	margin-top: 10px;
+}
+.nav-menu li a{
+	color: #303030;
+	margin-left: 15px;
+	font-size: 1rem;
+}
+.nav-menu li a:hover{
+	color: #4D87FB;
+	padding-left: 2px;
+   	border-left: 2px solid #4D87FB;
+   	transition: 0.1s;
+}
+.menu-active{
+	color: #4D87FB !important;
+   	font-weight: bold;
+   	padding-left: 2px;
+   	border-left: 2px solid #4D87FB;
+}
