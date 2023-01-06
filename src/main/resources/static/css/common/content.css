@@ -1,0 +1,95 @@
+.contnet-title {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: #3985E8;
+}
+.data-section{
+	/* margin-top: 10px; */
+}
+
+/* 필터 or 버튼 */
+.selectbox-section{
+    margin-top: 20px;
+  	display: flex;
+}
+.selectbox-section input,
+.selectbox-section button,
+.selectbox-section select{
+	margin-right: 10px;
+}
+.select-box{
+    width: 200px;
+    text-indent: 10px;
+    color: #777;
+    padding: 8px 2px;
+    border: 1px solid #ddd;
+}
+.select-box:focus{
+    outline: none;
+}
+.select-box::placeholder {
+    padding-left: 10px;
+}
+.research-btn{
+    width: 110px;
+    border: 0;
+    padding: 8px;
+    color: #fff;
+    background-color: #5378ff;
+}
+.research-btn:hover{
+    transition: 0.3s;
+    background-color: #8ba6f0;
+}
+.excel-btn{
+    width: 110px;
+    padding: 8px;
+    color: #5378ff;
+    background-color: #fff;
+    border: 1px solid #5378ff;
+}
+.excel-btn:hover{
+    color: white;
+    transition: 0.3s;
+    background-color: #94B8FF;
+}
+
+/* 데이터 테이블 */
+.table{
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 1rem;
+	color: #6D6D6D;
+}
+.table thead,
+.table tbody{
+	display: block;
+	padding: 0 10px;
+}
+.table tbody{
+	height: 550px;
+	max-height: 550px;
+	background-color: #F4F5F8;
+    overflow-x: hidden;
+  	overflow-y: overlay;
+}
+.table thead tr,
+.table tbody tr{
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	height: 44px;
+}
+.table tbody tr{
+	margin: 10px 0;
+   	background-color: #fff;
+   	box-shadow: 2px 2px 7px #e1e1e1;
+   	border-radius: 5px;
+}
+.table thead tr th{
+	color: #7EA9F9;
+	font-weight: normal;
+}
+.table tbody tr td{
+	text-align: center;
+}

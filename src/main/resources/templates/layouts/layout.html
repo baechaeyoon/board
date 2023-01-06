@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{../../../static/dist/js/jquery-ui.min.css}">
+	<link rel="stylesheet" th:href="@{../../../static/css/common/common.css}">
+    <link rel="stylesheet" th:href="@{../../../static/css/common/header.css}">
+    <link rel="stylesheet" th:href="@{../../../static/css/common/side.css}">
+    <link rel="stylesheet" th:href="@{../../../static/css/common/content.css}">
+    <link rel="stylesheet" th:href="@{../../../static/css/common/pagination.css}">
+    <link rel="stylesheet" th:href="@{../../../static/dist/css/jquery.datetimepicker.css}">
+    <link rel="stylesheet" th:href="@{../../../static/dist/js/fontawesome-free-5.15.4-web/css/all.min.css}">
+   	<script type="text/javascript" th:src="@{../../../static/dist/js/jquery-1.12.4.js}"></script>
+    <script type="text/javascript" th:src="@{../../../static/dist/js/jquery-ui.min.js}"></script>
+    <script type="text/javascript" th:src="@{../../../static/dist/js/jquery.datetimepicker.full.min.js}"></script>
+    <script type="text/javascript" th:src="@{../../../static/dist/js/fontawesome-free-5.15.4-web/js/all.min.js}"></script>
+    <script type="text/javascript" th:src="@{../../../static/dist/js/sockjs.js}"></script>
+    <script type="text/javascript" th:src="@{../../../static/dist/js/stomp.js}"></script>
+    
+<!-- 	<th:block th:replace="layouts/fragments/config :: configFragment" ></th:block> -->
+</head>
+<body>
+	<header>
+		<div class="container">
+			<th:block th:replace="layouts/fragments/header :: headerFragment"></th:block>
+		</div>
+	</header>
+	<div class="layout-row">
+		<div class="side-box">
+			<th:block th:replace="layouts/fragments/side :: sideFragment"></th:block>
+		</div>
+		<div class="content-box">
+			<th:block layout:fragment="content"></th:block>
+		</div>
+	</div>
+</body>
+</html>

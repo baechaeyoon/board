@@ -1,0 +1,26 @@
+<html lagn="ko" 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+    <!--configFragment 선언-->
+    <th:block th:fragment="configFragment">
+        <!-- 이 영역에 공통으로 사용할 css, js library를 선언한다. -->
+        <link rel="stylesheet" th:href="@{../../../static/css/common/common.css}">
+        <link rel="stylesheet" th:href="@{../../../static/css/common/header.css}">
+        <link rel="stylesheet" th:href="@{../../../static/css/common/side.css}">
+        <link rel="stylesheet" th:href="@{../../../static/css/common/content.css}">
+        <link rel="stylesheet" th:href="@{../../../static/css/common/pagination.css}">
+        <link rel="stylesheet" th:href="@{../../../static/library/css/jquery.datetimepicker.css}">
+        <script type="text/javascript" src="../../../static/library/js/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../../../static/library/js/jquery.datetimepicker.full.min.js"></script>
+	<style>
+	</style>
+	
+        <!-- Content Page의 CSS fragment 삽입 -->
+        <th:block layout:fragment="css"></th:block>
+
+        <!-- Content Page의 script fragment 삽입 -->
+        <th:block layout:fragment="script"></th:block>
+        
+    </th:block>
+</html>
