@@ -13,6 +13,14 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+* Entity : DB의 테이블과 1:1로 직접 매핑되며, 테이블이 가지지 않는 컬럼을 필드로 가져서는 안된다
+* @Setter 메서드의 사용을 지양해야 한다 -> 변경되지 않느 인스턴스에 대해서도 setter로 접근 가능하기 때문이다
+* 따라서 @Setter 대신 Builder와 Constructor(생성자)를 사용
+* @Builder를 사용하면 멤버 변수가 많아지더라도 어떤 값을 어떤 필드에 넣는지 코드를 통해 확인할 수 있고,
+* 필요한 값만 넣는 것이 가능하다는 장점이 있다
+* */
+
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Getter
@@ -32,26 +40,32 @@ public class UserEntity implements UserDetails {
     @Column(name = "name")
     private String name;
 
-//    @Column(name = "grade_idx")
-//    private int grade_idx;
-//
-//    @Column(name = "reg_date")
-//    private String reg_date;
-//
-//    @Column(name = "rc_time")
-//    private String rc_time;
-//
-//    @Column(name = "del_chk")
-//    private int del_chk;
-//
-//    @Column(name = "birth")
-//    private String birth;
+    @Column(name = "grade_idx")
+    private int grade_idx;
+
+    @Column(name = "reg_date")
+    private String reg_date;
+
+    @Column(name = "rc_time")
+    private String rc_time;
+
+    @Column(name = "del_chk")
+    private int del_chk;
+
+    @Column(name = "birth")
+    private String birth;
 
     @Builder
-    public UserEntity(String id, String password, String name) {
+    public UserEntity(Long idx, String id, String password, String name, int grade_idx, String reg_date, String rc_time, int del_chk, String birth) {
+        this.idx = idx;
         this.id = id;
         this.password = password;
         this.name = name;
+        this.grade_idx = grade_idx;
+        this.reg_date = reg_date;
+        this.rc_time = rc_time;
+        this.del_chk = del_chk;
+        this.birth = birth;
     }
 
     //사용자의 권한을 콜렉션 형태로 반환
