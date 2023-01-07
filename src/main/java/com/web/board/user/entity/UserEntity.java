@@ -21,6 +21,11 @@ import java.util.Set;
 * 필요한 값만 넣는 것이 가능하다는 장점이 있다
 * */
 
+/*
+* @NoArgsConstructor
+*  1) 파라미터가 없는 생성자를 생성
+*  2) 필드들이 final로 생성되어 있는 경우에는 필드를 초기화할 수 없기 때문에 생성자를 만들 수 없고 에러가 발생
+* */
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Getter
