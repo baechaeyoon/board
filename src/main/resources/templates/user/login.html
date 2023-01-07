@@ -5,15 +5,24 @@
     <title>login</title>
 </head>
 <body>
-<h1>로그인 페이지</h1> <hr>
 
-<form action="/login" method="POST">
-<!--    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />-->
-    id : <input type="text" name="id"> <br>
-    password : <input type="password" name="password"> <br>
-    <button type="submit">Login</button>
-</form> <br>
+<h1>Spring Security Login Page</h1>
+<div th:if="${param.error}">Invalid id and password</div>
+<div th:if="${param.logout}">You have been logged out.</div>
 
+<form th:action="@{/login}" method="post">
+    <div>
+        <label> ID : <input type="text" name="id"/></label>
+    </div>
+    <br/>
+    <div>
+        <label> PASSWORD : <input type="password" name="password"/></label>
+    </div>
+    <br/>
+    <div>
+        <input type="submit" value="Sign In"/>
+    </div>
+</form>
 
 </body>
 </html>

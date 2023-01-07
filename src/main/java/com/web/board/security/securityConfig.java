@@ -20,13 +20,23 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring().antMatchers("/static/css/**","/static/js/**","/static/img/**");
     }
 
+    /*
+    * permitAll() : 누구나 접근 가능
+    * hasRole() : 특정 권한이 있는 사람만 접근 가능
+    * authenticated() : 권한이 있으면 무조건 접근 가능
+    * anyRequest는 anyMatchers에서 설정하지 않는 나머지 경로를 의미한다
+    * loginPage() : 로그인 페이지 링크 설정
+    * defaultSuccessUrl() : 로그인 성공 후 리다이렉트할 주소
+    * logoutSuccessUrl() : 로그아웃 성공 후 리다이렉트할 주소
+    * invalidateHttpSession() : 로그아웃 이후 세션 전체 삭제 여부
+    * */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests()    //접근에 대한 인증 설정
                 .antMatchers("/index","/login").permitAll()  //누구나 접근 허용
-                .antMatchers("/").hasRole("welcome")    //welcome과 root만 접근 가능
-                .antMatchers("/admin").hasRole("master")    //master만 접근 가능
+                .antMatchers("/").hasRole("ROLE_welcome")    //USER, admin만 접근 가능
+                .antMatchers("/admin").hasRole("ADMIN")    //admin만 접근 가능
                 .anyRequest().authenticated()   // 나머지 요청들은 권한의 종류에 상관 없이 권한이 있어야 접근 가능
 
                 .and()
