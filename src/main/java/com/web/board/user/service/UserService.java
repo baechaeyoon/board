@@ -9,6 +9,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+/*
+* @RequiredArgsConstructor는 초기화 되지 않은 final 필드나, @NonNull이 붙은 필드에 대해 생성자를 생성해줌
+* */
 @RequiredArgsConstructor
 @Service
 public class UserService implements UserDetailsService {
