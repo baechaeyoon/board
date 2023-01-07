@@ -6,10 +6,9 @@
 </head>
 <body>
 <h1>로그인 페이지</h1> <hr>
-<img src="/img/img.jpeg" />
 
 <form action="/login" method="POST">
-    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+<!--    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />-->
     id : <input type="text" name="id"> <br>
     password : <input type="password" name="password"> <br>
     <button type="submit">Login</button>
