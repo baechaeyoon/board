@@ -3,19 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <title>login</title>
+    <style>
+    	*{
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        p{
+            margin: 0;
+        }
+        a{
+            text-decoration-line: none;
+            color: #555;
+        }
+        button{
+        	cursor: pointer;
+        }
+        .container{
+            margin-top: 15rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .row{
+            padding: 2rem 4rem;
+        }
+        
+        /* Login Box */
+        .login-box{
+            display: flex;
+            justify-items: center;
+            flex-direction: column;
+                
+        }
+        
+         /* Logo Box */
+        .logo-box{
+            display: flex;
+            width: 45rem;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 4.8rem;
+            font-weight: bold;
+        }
+        
+        /* Input Box */
+        .input-box form{
+        	display: flex;
+    		flex-direction: column;
+        }
+        .input-box input,
+        .input-box button {
+        	margin: 0.8rem;
+		    padding: 1.2rem;
+		    border: 1px solid #6b72804d;
+		    border-radius: 0.5rem;
+		}
+		.input-box button{
+			background-color: #2563eb;
+			border-color: #2563eb;
+			color: #fff;
+			font-weight: bold;
+		}
+		.input-box button:hover{
+			background-color: #356ce5;
+		}
+		
+		/* Find Box */
+		.find-box p{
+			margin: 0.8rem;
+			font-size: 1.4rem;
+			font-weight: bold;
+		}
+		.find-box button {
+        	margin: 0.8rem;
+		    padding: 1.2rem;
+		    width: 100%;
+		    background-color: #fff;
+		    border: 3px solid #2563eb;
+		    border-radius: 0.5rem;
+		}
+		.find-btn-area{
+			display: flex;
+		}
+		
+		/* Footer */
+		.footer{
+		    position: absolute;
+		    padding: 20px 0;
+		    bottom: 0;
+		    width: 100%;
+		    font-size: 1.2rem;
+		    font-weight: bold;
+		    text-align: center;
+		}
+    </style>
 </head>
 <body>
 	<div class="container">
 		<div class="login-box">
-			<h1>로그인 페이지</h1> <hr>
-			<img src="/img/img.jpeg" />
-			
-			<form action="/login" method="POST">
-			    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-			    id : <input type="text" name="id"> <br>
-			    password : <input type="password" name="password"> <br>
-			    <button type="submit">Login</button>
-			</form>
+			<div class="row logo-box">
+				<img src="/img/img.jpeg" />
+			</div>
+            <div class="row input-box">
+				<form action="/login" method="POST">
+				    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+				    <input class="login-input" type="text" name="id" placeholder="아이디" autocomplete=off>
+				    <input class="login-input" type="password" name="password" placeHolder="비밀번호" autocomplete=off>
+				    <button type="submit">로그인</button>
+				</form>
+			</div>
+			<div class="row find-box">
+				<p>※ 계정이 기억이 나지 않나요??</p>
+				<div class="find-btn-area">
+					<button>아이디 찾기</button>
+					<button>비밀번호 찾기</button>
+				</div>
+			</div>
 		</div>
 		<div class="footer">
 			<p>ⓒ 2022 (주)Yoon Corp. All rights reserved.</p>
