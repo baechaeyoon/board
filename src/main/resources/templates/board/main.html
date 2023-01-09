@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html
+	xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layouts/layout}">
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
 </head>
 <body>
-
+	<th:block layout:fragment="content">
+		<div class="content-container">
+			<div class="search-box">
+				<div>select / search / write area</div>
+			</div>
+			<div class="content-box">
+				<div>table</div>
+				<div>pagination</div>
+			</div>
+		</div>
+	</th:block>
 </body>
 </html>

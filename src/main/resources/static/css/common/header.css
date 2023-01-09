@@ -1,27 +1,13 @@
 .header ul{
 	display: flex;
 	list-style: none;
+	font-size: 1.4rem;
 }
 .header ul li{
 	padding: 20px;
 }
-.header ul li:hover{
-	color: #ccc;
-	transition: 0.3s;;
-}
-.header .alarm_list{
-	margin-right: 20px;
-	cursor: pointer;
-}
-.header .alarm_list svg{
-	color: #6c6c6c;
-}
-.header .alarm_list span{
-	display: none;
-    position: absolute;
-    right: 36px;
-    top: 22px;
-    font-size: 0.875rem;
+.header ul li:hover a{
+	color: #0090f9;
 }
 .header .header_logo img{
 	width: 70%;
