@@ -4,20 +4,21 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" th:href="@{../../../static/dist/js/jquery-ui.min.css}">
-	<link rel="stylesheet" th:href="@{../../../static/css/common/common.css}">
-    <link rel="stylesheet" th:href="@{../../../static/css/common/header.css}">
-    <link rel="stylesheet" th:href="@{../../../static/css/common/side.css}">
-    <link rel="stylesheet" th:href="@{../../../static/css/common/content.css}">
-    <link rel="stylesheet" th:href="@{../../../static/css/common/pagination.css}">
-    <link rel="stylesheet" th:href="@{../../../static/dist/css/jquery.datetimepicker.css}">
-    <link rel="stylesheet" th:href="@{../../../static/dist/js/fontawesome-free-5.15.4-web/css/all.min.css}">
-   	<script type="text/javascript" th:src="@{../../../static/dist/js/jquery-1.12.4.js}"></script>
-    <script type="text/javascript" th:src="@{../../../static/dist/js/jquery-ui.min.js}"></script>
-    <script type="text/javascript" th:src="@{../../../static/dist/js/jquery.datetimepicker.full.min.js}"></script>
-    <script type="text/javascript" th:src="@{../../../static/dist/js/fontawesome-free-5.15.4-web/js/all.min.js}"></script>
-    <script type="text/javascript" th:src="@{../../../static/dist/js/sockjs.js}"></script>
-    <script type="text/javascript" th:src="@{../../../static/dist/js/stomp.js}"></script>
+	<link rel="stylesheet" th:href="@{../../library/js/jquery-ui.min.css}">
+	<link rel="stylesheet" th:href="@{../../css/common/common.css}">
+    <link rel="stylesheet" th:href="@{../../css/common/header.css}">
+    <link rel="stylesheet" th:href="@{../../css/common/side.css}">
+    <link rel="stylesheet" th:href="@{../../css/common/content.css}">
+    <link rel="stylesheet" th:href="@{../../css/common/footer.css}">
+    <link rel="stylesheet" th:href="@{../../css/common/pagination.css}">
+    <link rel="stylesheet" th:href="@{../../library/css/jquery.datetimepicker.css}">
+    <link rel="stylesheet" th:href="@{../../library/js/fontawesome-free-5.15.4-web/css/all.min.css}">
+   	<script type="text/javascript" th:src="@{../../library/js/jquery-1.12.4.js}"></script>
+    <script type="text/javascript" th:src="@{../../library/js/jquery-ui.min.js}"></script>
+    <script type="text/javascript" th:src="@{../../library/js/jquery.datetimepicker.full.min.js}"></script>
+    <script type="text/javascript" th:src="@{../../library/js/fontawesome-free-5.15.4-web/js/all.min.js}"></script>
+    <script type="text/javascript" th:src="@{../../library/js/sockjs.js}"></script>
+    <script type="text/javascript" th:src="@{../../library/js/stomp.js}"></script>
     
 <!-- 	<th:block th:replace="layouts/fragments/config :: configFragment" ></th:block> -->
 </head>
@@ -28,12 +29,14 @@
 		</div>
 	</header>
 	<div class="layout-row">
-		<div class="side-box">
-			<th:block th:replace="layouts/fragments/side :: sideFragment"></th:block>
-		</div>
+		<div class="left" style="width: 180px;">ad</div>
 		<div class="content-box">
 			<th:block layout:fragment="content"></th:block>
 		</div>
+		<div class="right" style="width: 180px;">ad</div>
 	</div>
+	<footer>
+		<th:block th:replace="layouts/fragments/footer :: footerFragment"></th:block>
+	</footer>
 </body>
 </html>

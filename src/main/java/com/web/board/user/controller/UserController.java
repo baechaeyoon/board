@@ -60,4 +60,9 @@ public class UserController {
         new SecurityContextLogoutHandler().logout(request,response, SecurityContextHolder.getContext().getAuthentication());
         return "redirect:/login";
     }
+    
+    @GetMapping("/main")
+    public String main() {
+    	return "board/main";
+    }
 }
