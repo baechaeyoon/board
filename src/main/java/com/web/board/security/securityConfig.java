@@ -33,7 +33,6 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
     * */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-    	/*
         http
                 .authorizeHttpRequests()    //접근에 대한 인증 설정
                 .antMatchers("/index","/login").permitAll()  //누구나 접근 허용
@@ -51,7 +50,7 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
                         .logoutSuccessUrl("/login")     //로그아웃 성공 시 리다이렉트 주소
                         .invalidateHttpSession(true)    //세션 날리기
         ;
-        */
+
     }
 
     @Override
