@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>login</title>
@@ -105,7 +105,7 @@
 	<div class="container">
 		<div class="login-box">
 			<div class="row logo-box">
-				<img src="/img/img.jpeg" />
+				<img th:src="@{../../img/img.jpeg}" />
 			</div>
             <div class="row input-box">
 				<form action="/login" method="POST">
