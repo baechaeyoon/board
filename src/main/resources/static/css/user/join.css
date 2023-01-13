@@ -5,7 +5,8 @@ body{
 
  /* Join Box */
  .join-box{
-    padding: 20px;
+    padding: 6rem 2rem;
+    height: 64rem;
     display: flex;
     justify-items: center;
     flex-direction: column;
