@@ -1,9 +1,17 @@
+/* Common */
+body{
+	background-color: #f7f7f7;
+}
+
 /* Login Box */
  .login-box{
-     display: flex;
-     justify-items: center;
-     flex-direction: column;
-         
+    padding: 20px;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+ 	border-radius: 10px;
+    background-color: #fff;
  }
  
   /* Logo Box */
@@ -29,13 +37,13 @@
     border-radius: 0.75rem;
 }
 .input-box button{
-	background-color: #2563eb;
-	border-color: #2563eb;
+	background-color: #b0c4de;
+	border-color: #b0c4de;
 	color: #fff;
 	font-weight: bold;
 }
 .input-box button:hover{
-	background-color: #356ce5;
+	background-color: #79aff5;
 }
 
 /* Find Box */
@@ -49,7 +57,7 @@
     padding: 1.2rem;
     width: 100%;
     background-color: #fff;
-    border: 3px solid #2563eb;
+    border: 3px solid #b0c4de;
     border-radius: 0.75rem;
 }
 .find-btn-area{

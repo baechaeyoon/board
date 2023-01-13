@@ -25,7 +25,7 @@
 .logo-image p{
     width: 100px;
     height: 100px;
-    border: 10px solid #356ce5;
+    border: 10px solid #b0c4de;
     border-radius: 50%;
 }
 .title{
@@ -53,17 +53,18 @@
     margin-right: 2rem;
 }
 .login{
-    border-color: #2563eb;
+    border-color: #b0c4de;
 }
 .login:hover{
     color: #858585;
 }
 .join{
-    background-color: #2563eb;
-    border-color: #2563eb;
+    background-color: #b0c4de;
+    border-color: #b0c4de;
     color: #fff;
 }
 .join:hover{
-    background-color: #356ce5;
-    border-color: #356ce5;
+    border: 3px solid #79aff5;
+    background-color: #79aff5;
+    color: #fff;
 }
