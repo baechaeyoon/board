@@ -1,105 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{../../css/common/common.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{../../css/common/footer.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{../../css/user/login.css}" rel="stylesheet" type="text/css">
     <title>login</title>
-    <style>
-    	*{
-            box-sizing: border-box;
-        }
-        html{
-            font-size: 62.5%;
-        }
-        p{
-            margin: 0;
-        }
-        a{
-            text-decoration-line: none;
-            color: #555;
-        }
-        button{
-        	cursor: pointer;
-        }
-        .container{
-            margin-top: 15rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .row{
-            padding: 2rem 4rem;
-        }
-        
-        /* Login Box */
-        .login-box{
-            display: flex;
-            justify-items: center;
-            flex-direction: column;
-                
-        }
-        
-         /* Logo Box */
-        .logo-box{
-            display: flex;
-            width: 45rem;
-            align-items: center;
-            justify-content: space-evenly;
-            font-size: 4.8rem;
-            font-weight: bold;
-        }
-        
-        /* Input Box */
-        .input-box form{
-        	display: flex;
-    		flex-direction: column;
-        }
-        .input-box input,
-        .input-box button {
-        	margin: 0.8rem;
-		    padding: 1.2rem;
-		    border: 1px solid #6b72804d;
-		    border-radius: 0.75rem;
-		}
-		.input-box button{
-			background-color: #2563eb;
-			border-color: #2563eb;
-			color: #fff;
-			font-weight: bold;
-		}
-		.input-box button:hover{
-			background-color: #356ce5;
-		}
-		
-		/* Find Box */
-		.find-box p{
-			margin: 0.8rem;
-			font-size: 1.4rem;
-			font-weight: bold;
-		}
-		.find-box button {
-        	margin: 0.8rem;
-		    padding: 1.2rem;
-		    width: 100%;
-		    background-color: #fff;
-		    border: 3px solid #2563eb;
-		    border-radius: 0.75rem;
-		}
-		.find-btn-area{
-			display: flex;
-		}
-		
-		/* Footer */
-		.footer{
-		    position: absolute;
-		    padding: 20px 0;
-		    bottom: 0;
-		    width: 100%;
-		    font-size: 1.2rem;
-		    font-weight: bold;
-		    text-align: center;
-		}
-    </style>
 </head>
 <body>
 	<div class="container">
@@ -124,9 +31,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<p>ⓒ 2022 (주)Yoon Corp. All rights reserved.</p>
-		</div>
+		<th:block th:replace="layouts/fragments/footer :: footerFragment"></th:block>
 	</div>
 </body>
 </html>
