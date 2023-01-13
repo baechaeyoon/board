@@ -9,18 +9,21 @@
 </head>
 <body>
 <div class="container">
+	<div class="join-box">
+		<div class="row logo-box">
+			<p>Sign Up</p>
+		</div>
+		<div class="row input-box">
+		    <form action="/join">
+		        <input class="join-input" type="text" name="id" placeholder="아이디" autocomplete=off>
+		        <input class="join-input" type="password" name="password" placeHolder="비밀번호" autocomplete=off>
+		        <input class="join-input" type="password" name="passwordCheck" placeHolder="비밀번호 확인" autocomplete=off>
+		        <input class="join-input" type="text" name="name" placeholder="이름" autocomplete="off"/>
+		        <input class="birth" type="date" name="birth" id="birth"/>
+		        <button type="button">회원가입</button>
+		    </form>
+		</div>
+	</div>
 </div>
-
-<div class="row input-box">
-    <form action="/join">
-        <input class="join-input" type="text" name="id" placeholder="아이디" autocomplete=off>
-        <input class="join-input" type="password" name="password" placeHolder="비밀번호" autocomplete=off>
-        <input class="join-input" type="password" name="passwordCheck" placeHolder="비밀번호 확인" autocomplete=off>
-        <input class="join-input" type="text" name="name" placeholder="이름" autocomplete="off"/>
-        <input class="birth" type="date" name="birth" id="birth"/>
-        <button type="button">회원가입</button>
-    </form>
-</div>
-
 </body>
 </html>
