@@ -40,6 +40,11 @@ public class UserController {
         return "user/login";
     }
 
+    @GetMapping(value = "/join")
+    public String join(){
+        return "/user/join";
+    }
+
     /*
     * 회원 추가
     * @author : baechaeyoon

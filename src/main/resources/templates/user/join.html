@@ -5,10 +5,24 @@
     <link th:href="@{../../css/common/common.css}" rel="stylesheet" type="text/css">
     <link th:href="@{../../css/common/footer.css}" rel="stylesheet" type="text/css">
     <link th:href="@{../../css/user/join.css}" rel="stylesheet" type="text/css">
-    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>회원가입</title>
 </head>
 <body>
 <div class="container">
 </div>
+
+<div class="row input-box">
+    <form action="/join">
+        <input class="join-input" type="text" name="id" placeholder="아이디" autocomplete=off>
+        <input class="join-input" type="password" name="password" placeHolder="비밀번호" autocomplete=off>
+        <input class="join-input" type="password" name="passwordCheck" placeHolder="비밀번호 확인" autocomplete=off>
+        <input class="join-input" type="text" name="name" placeholder="이름" autocomplete="off"/>
+        <input class="birth" type="date" name="birth" id="birth"/>
+        <button type="button">회원가입</button>
+    </form>
+</div>
+
 </body>
 </html>
