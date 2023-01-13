@@ -5,7 +5,8 @@ body{
 
 /* Login Box */
  .login-box{
-    padding: 20px;
+    padding: 2rem;
+    height: 64rem;
     display: flex;
     justify-items: center;
     flex-direction: column;
