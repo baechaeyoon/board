@@ -1,0 +1,57 @@
+/* Login Box */
+ .login-box{
+     display: flex;
+     justify-items: center;
+     flex-direction: column;
+         
+ }
+ 
+  /* Logo Box */
+ .logo-box{
+     display: flex;
+     width: 45rem;
+     align-items: center;
+     justify-content: space-evenly;
+     font-size: 4.8rem;
+     font-weight: bold;
+ }
+ 
+ /* Input Box */
+ .input-box form{
+  	display: flex;
+	flex-direction: column;
+  }
+.input-box input,
+.input-box button {
+	margin: 0.8rem;
+    padding: 1.2rem;
+    border: 1px solid #6b72804d;
+    border-radius: 0.75rem;
+}
+.input-box button{
+	background-color: #2563eb;
+	border-color: #2563eb;
+	color: #fff;
+	font-weight: bold;
+}
+.input-box button:hover{
+	background-color: #356ce5;
+}
+
+/* Find Box */
+.find-box p{
+	margin: 0.8rem;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+.find-box button {
+      	margin: 0.8rem;
+    padding: 1.2rem;
+    width: 100%;
+    background-color: #fff;
+    border: 3px solid #2563eb;
+    border-radius: 0.75rem;
+}
+.find-btn-area{
+	display: flex;
+}

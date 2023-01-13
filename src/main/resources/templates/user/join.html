@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link th:href="@{../../css/common/common.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{../../css/common/footer.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{../../css/user/join.css}" rel="stylesheet" type="text/css">
     <title>Title</title>
 </head>
 <body>
-
+<div class="container">
+	<th:block th:replace="layouts/fragments/footer :: footerFragment"></th:block>
+</div>
 </body>
 </html>

@@ -1,80 +1,29 @@
-/* common */
+/* Common Tag */
 *{
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
 }
 html{
-	font-size: 62.5%;
+    font-size: 62.5%;
+}
+p{
+    margin: 0;
 }
 a{
-	text-decoration: none;
-	color: #0f0f0f;
-}
-ul{
-	list-style: none;
-}
-ul li{
-	cursor: pointer;
+    text-decoration-line: none;
+    color: #555;
 }
 button{
 	cursor: pointer;
 }
-.container{
-	margin: 0 auto;
-	padding: 5px 20px;
-	box-shadow: 0 0.15rem 0.75rem 0 rgb(58 59 69 / 15%);
-}
-header{
 
-}
-.header{
-	height: 65px;
-	display: flex;
+/* Common Class */
+.container{
+    margin-top: 15rem;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 }
-.layout-row{
-	display: flex;
-	margin-top: 40px;
-}
-.content-box{
-	width: 100%;
-	box-sizing: border-box;
-}
-.content{
-    width: 100%;
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
-}
-.span_border{
-	display: inline-block;
-	padding: 3px 0;
-	width: 120px;
-    border-radius: 30px;
-}
-.span_border_red{
-	color: #FF7272;
-    background-color: #FFEFF0;
-    border: 1px solid #FFC8CC;
-}
-.span_border_blue{
-	color: #5E9BFB;
-    background-color: #F6FAFF;
-    border: 1px solid #97C0FF;
-}
-.span_border_orange{
-    color: #FEAD52;
-    background-color: #FFF9F1;
-    border: 1px solid #FFC06E;
-}
-.span_border_green{
-	color: #5BD567;
-    background-color: #F3FFF5;
-    border: 1px solid #A8EBAF;
-}
-.red{
-	color: #ff0000;
+.row{
+    padding: 2rem 4rem;
 }
