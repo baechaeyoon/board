@@ -40,6 +40,11 @@ public class UserController {
         return "user/login";
     }
 
+    /*
+     * 회원가입 페이지
+     * @author : baechaeyoon
+     * @date : 2023-01-13
+     * */
     @GetMapping(value = "/join")
     public String join(){
         return "/user/join";
