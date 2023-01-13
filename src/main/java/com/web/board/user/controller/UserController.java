@@ -70,7 +70,12 @@ public class UserController {
         new SecurityContextLogoutHandler().logout(request,response, SecurityContextHolder.getContext().getAuthentication());
         return "redirect:/login";
     }
-    
+
+    /*
+     * main 페이지
+     * @author : 비엔나
+     * @date : 2023-01-06
+     * */
     @GetMapping("/main")
     public String main() {
     	return "board/main";
