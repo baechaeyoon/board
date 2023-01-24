@@ -35,8 +35,8 @@ public class securityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeHttpRequests()    //접근에 대한 인증 설정
                 .antMatchers("/index","/login").permitAll()  //누구나 접근 허용
-                .antMatchers("/").hasRole("ROLE_welcome")    //USER, admin만 접근 가능
-                .antMatchers("/admin").hasRole("ADMIN")    //admin만 접근 가능
+                .antMatchers("/").hasRole("welcome")    //USER, admin만 접근 가능
+                .antMatchers("/admin").hasRole("master")    //admin만 접근 가능
                 .anyRequest().authenticated()   // 나머지 요청들은 권한의 종류에 상관 없이 권한이 있어야 접근 가능
 
                 .and()
