@@ -29,6 +29,7 @@ import java.util.Set;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Getter
+@Table(name = "user")
 public class UserEntity implements UserDetails {
 
     @Id
@@ -45,31 +46,15 @@ public class UserEntity implements UserDetails {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "grade_idx")
-    private int grade_idx;
-
-    @Column(name = "reg_date")
-    private String reg_date;
-
-    @Column(name = "rc_time")
-    private String rc_time;
-
-    @Column(name = "del_chk")
-    private int del_chk;
-
     @Column(name = "birth")
     private String birth;
 
     @Builder
-    public UserEntity(Long idx, String id, String password, String name, int grade_idx, String reg_date, String rc_time, int del_chk, String birth) {
+    public UserEntity(Long idx, String id, String password, String name, String birth) {
         this.idx = idx;
         this.id = id;
         this.password = password;
         this.name = name;
-        this.grade_idx = grade_idx;
-        this.reg_date = reg_date;
-        this.rc_time = rc_time;
-        this.del_chk = del_chk;
         this.birth = birth;
     }
 
