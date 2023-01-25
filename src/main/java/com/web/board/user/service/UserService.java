@@ -45,6 +45,7 @@ public class UserService implements UserDetailsService {
        return userRepository.save(UserEntity.builder()
                .id(userDto.getId())
                .name(userDto.getName())
+               .birth(userDto.getBirth())
                .password(userDto.getPassword()).build()).getIdx();
     }
     

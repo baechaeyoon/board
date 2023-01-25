@@ -58,7 +58,6 @@ public class UserController {
     * */
     @PostMapping("/register")
     public String join(UserDto userDto){
-        userDto.setGrade_idx(1);
         userService.save(userDto);
         return "redirect:/login";
     }
