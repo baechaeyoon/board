@@ -16,7 +16,7 @@ public class UserDto {
     private int idx;
     private String id;
     private String password;
-    private String grade_idx;
+    private int grade_idx;
     private String reg_date;
     private String rc_time;
     private int del_chk;

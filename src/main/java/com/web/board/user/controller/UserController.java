@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 public class UserController {
 
     private final UserService userService;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     /*
     * index 페이지
@@ -57,14 +56,11 @@ public class UserController {
     * @author : baechaeyoon
     * @date : 2022-12-27
     * */
-    @PostMapping("/join")
+    @PostMapping("/register")
     public String join(UserDto userDto){
-        userDto.setGrade_idx("welcome");
-        String rawPassword = userDto.getPassword();
-        String encPassword = bCryptPasswordEncoder.encode(rawPassword);
-        userDto.setPassword(encPassword);
+        userDto.setGrade_idx(1);
         userService.save(userDto);
-        return "redirect:/join";
+        return "redirect:/login";
     }
 
     /*
