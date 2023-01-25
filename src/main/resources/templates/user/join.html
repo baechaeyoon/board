@@ -14,13 +14,13 @@
 			<p>Sign Up</p>
 		</div>
 		<div class="row input-box">
-		    <form action="/join">
+		    <form th:action="@{/register}" method="post">
 		        <input class="join-input" type="text" name="id" placeholder="아이디" autocomplete=off>
 		        <input class="join-input" type="password" name="password" placeHolder="비밀번호" autocomplete=off>
 		        <input class="join-input" type="password" name="passwordCheck" placeHolder="비밀번호 확인" autocomplete=off>
 		        <input class="join-input" type="text" name="name" placeholder="이름" autocomplete="off"/>
 		        <input class="birth" type="date" name="birth" id="birth"/>
-		        <button type="button">회원가입</button>
+		        <button type="submit">회원가입</button>
 		    </form>
 		</div>
 	</div>

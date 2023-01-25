@@ -9,7 +9,7 @@ import lombok.Getter;
 @Getter
 public enum Role {
     // welcome(1), friend(2), family(3), master(4)
-    ROLE_welcome("가입자"), ROLE_friend("일반 사용자"), ROLE_family("상위 사용자"), ROLE_master("관리자");
+    welcome("ROLE_welcome"), friend("ROLE_friend"), family("ROLE_family"), master("ROLE_master");
 
     private String description;
 
