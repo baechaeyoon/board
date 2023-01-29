@@ -22,5 +22,6 @@ public class UserDto {
     private int del_chk;
     private String birth;
     private String name;
+    private String address;
 
 }

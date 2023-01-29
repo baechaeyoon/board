@@ -6,6 +6,25 @@
     <link th:href="@{../../css/common/footer.css}" rel="stylesheet" type="text/css">
     <link th:href="@{../../css/user/join.css}" rel="stylesheet" type="text/css">
     <title>회원가입</title>
+
+	<script>
+		//유효성 검사 코드 만들기
+		function signUp(){
+			var id = $("#id").val();
+
+			if(id.length == 0){
+				alert("아이디를 입력해 주세요.");
+				$("#id").focus();
+				return false;
+			}
+
+			if(confirm("회원가입을 하시겠습니까?")){
+				alert("회원가입을 축하합니다!");
+				return true;
+			}
+		}
+	</script>
+
 </head>
 <body>
 <div class="container">
@@ -21,28 +40,10 @@
 		        <input class="join-name" type="text" name="name" id="name" placeholder="이름" autocomplete="off" />
 				<input class="join-address" type="text" name="address" id="address" placeholder="주소" autocomplete="off" />
 		        <input class="join-birth" type="date" name="birth" id="birth" />
-		        <button type="submit" onclick="signUp">회원가입</button>
+		        <button type="submit" onsubmit="signUp">회원가입</button>
 		    </form>
 		</div>
 	</div>
 </div>
 </body>
 </html>
-
-<script>
-	//유효성 검사 코드 만들기
-	function signUp(){
-		var id = $("#id").val();
-
-		if(id == ""){
-			alert("아이디를 입력해 주세요.");
-			$("#id").focus();
-			return false;
-		}
-
-		if(confirm("회원가입을 하시겠습니까?")){
-			alert("회원가입을 축하합니다!");
-			return true;
-		}
-	}
-</script>

@@ -49,13 +49,17 @@ public class UserEntity implements UserDetails {
     @Column(name = "birth")
     private String birth;
 
+    @Column(name = "address")
+    private String address;
+
     @Builder
-    public UserEntity(Long idx, String id, String password, String name, String birth) {
+    public UserEntity(Long idx, String id, String password, String name, String birth, String address) {
         this.idx = idx;
         this.id = id;
         this.password = password;
         this.name = name;
         this.birth = birth;
+        this.address = address;
     }
 
     //사용자의 권한을 콜렉션 형태로 반환
