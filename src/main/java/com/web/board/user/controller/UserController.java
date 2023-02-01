@@ -3,6 +3,8 @@ package com.web.board.user.controller;
 import com.web.board.user.dto.UserDto;
 import com.web.board.user.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -14,11 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 @Controller
 @RequiredArgsConstructor
 public class UserController {
 
     private final UserService userService;
+    private final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     /*
     * index 페이지
@@ -59,6 +63,7 @@ public class UserController {
     @PostMapping("/register")
     public String join(UserDto userDto){
         userService.save(userDto);
+        //logger.info("회원 추가 내용 :: " + userDto);
         return "redirect:/login";
     }
 

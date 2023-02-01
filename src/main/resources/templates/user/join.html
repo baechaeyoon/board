@@ -22,10 +22,6 @@
 				return false;
 			}
 
-			if(confirm("회원가입을 하시겠습니까?")){
-				alert("회원가입을 축하합니다!");
-				return true;
-			}
 		}
 	</script>
 
@@ -44,7 +40,7 @@
 		        <input class="join-name" type="text" name="name" id="name" placeholder="이름" autocomplete="off" />
 				<input class="join-address" type="text" name="address" id="address" placeholder="주소" autocomplete="off" />
 		        <input class="join-birth" type="date" name="birth" id="birth" />
-		        <button type="button" onclick="signUp()">회원가입</button>
+		        <button type="submit" onclick="signUp()">회원가입</button>
 		    </form>
 		</div>
 	</div>
