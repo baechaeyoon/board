@@ -1,4 +1,4 @@
-# board
+# 🌐 board
 spring boot를 이용한 게시판
 
 - ### 👥 author : baechaeyoon, EsRun
