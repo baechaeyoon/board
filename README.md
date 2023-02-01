@@ -17,11 +17,8 @@ spring boot를 이용한 게시판
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">
 
 - ### 📈 goal
-  > spring security 개념 익히기
-  > CRUD 구현
-  > .. to be continue
-  > .
-  > .
-
+  - #### spring security 익히기
+  - #### CRUD 구현
+ 
 - ### 💰 start
   2022-12-23~
