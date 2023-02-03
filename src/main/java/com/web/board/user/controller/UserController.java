@@ -63,7 +63,7 @@ public class UserController {
     @PostMapping("/register")
     public String join(UserDto userDto){
         userService.save(userDto);
-        //logger.info("회원 추가 내용 :: " + userDto);
+        logger.info("회원 추가 내용 :: " + userDto);
         return "redirect:/login";
     }
 
