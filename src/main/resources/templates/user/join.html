@@ -14,13 +14,33 @@
 	<script>
 		//유효성 검사 코드 만들기
 		function signUp(on){
-			var id = $("#id").val();
+			let id = $("#id").val();
+			let pw = $("#password").val();
+			let pwChk = $("#passwordCheck").val();
+			let regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/;
 
+			//아이디를 입력안했을 경우
 			if(id.length == 0){
 				alert("아이디를 입력해 주세요.");
 				$("#id").focus();
 				return false;
 			}
+
+			//비밀번호를 입력안했을 경우
+			if(pw.length == 0){
+				alert("비밀번호를 입력해 주세요.");
+				$("#password").focus();
+				return false;
+			}
+
+			//비밀번호와 비밀번호 확인이 일치하지 않을 경우
+			//수정필요
+			if((pw.value()) != (pwChk.value())){
+				alert("비밀번호가 일치하지 않습니다.");
+				$("#password").focus();
+				return false;
+			}
+
 			on.submit();
 		}
 	</script>
